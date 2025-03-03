@@ -16,15 +16,15 @@ xmlns="http://www.w3.org/TR/REC-html40">
   <o:Author>user</o:Author>
   <o:LastAuthor>김정수</o:LastAuthor>
   <o:Revision>2</o:Revision>
-  <o:TotalTime>69</o:TotalTime>
-  <o:Created>2025-03-03T12:49:00Z</o:Created>
-  <o:LastSaved>2025-03-03T12:49:00Z</o:LastSaved>
+  <o:TotalTime>219</o:TotalTime>
+  <o:Created>2025-03-03T18:22:00Z</o:Created>
+  <o:LastSaved>2025-03-03T18:22:00Z</o:LastSaved>
   <o:Pages>2</o:Pages>
-  <o:Words>33</o:Words>
-  <o:Characters>194</o:Characters>
+  <o:Words>36</o:Words>
+  <o:Characters>206</o:Characters>
   <o:Lines>1</o:Lines>
   <o:Paragraphs>1</o:Paragraphs>
-  <o:CharactersWithSpaces>226</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>241</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -112,8 +112,9 @@ href="bible-dictionary.files/colorschememapping.xml">
    QFormat="true" Name="caption"/>
   <w:LsdException Locked="false" QFormat="true" Name="Title"/>
   <w:LsdException Locked="false" QFormat="true" Name="Subtitle"/>
-  <w:LsdException Locked="false" QFormat="true" Name="Strong"/>
-  <w:LsdException Locked="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="99" Name="Normal (Web)"/>
   <w:LsdException Locked="false" Priority="99" SemiHidden="true"
    Name="Placeholder Text"/>
   <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
@@ -240,6 +241,14 @@ href="bible-dictionary.files/colorschememapping.xml">
 <!--
  /* Font Definitions */
  @font-face
+	{font-family:굴림;
+	panose-1:2 11 6 0 0 1 1 1 1 1;
+	mso-font-alt:Gulim;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
 	{font-family:"Cambria Math";
 	panose-1:2 4 5 3 5 4 6 3 2 4;
 	mso-font-charset:0;
@@ -253,13 +262,6 @@ href="bible-dictionary.files/colorschememapping.xml">
 	mso-generic-font-family:modern;
 	mso-font-pitch:variable;
 	mso-font-signature:-1879048145 701988091 18 0 524289 0;}
-@font-face
-	{font-family:"KoPubWorld바탕체 Medium";
-	panose-1:0 0 6 0 0 0 0 0 0 0;
-	mso-font-charset:129;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:-1342133569 2044198139 16 0 524289 0;}
 @font-face
 	{font-family:Times;
 	panose-1:2 2 6 3 5 4 5 2 3 4;
@@ -275,12 +277,26 @@ href="bible-dictionary.files/colorschememapping.xml">
 	mso-font-pitch:variable;
 	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
 @font-face
+	{font-family:"KoPubWorld바탕체 Medium";
+	panose-1:0 0 6 0 0 0 0 0 0 0;
+	mso-font-charset:129;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342133569 2044198139 16 0 524289 0;}
+@font-face
 	{font-family:"\@맑은 고딕";
 	panose-1:2 11 5 3 2 0 0 2 0 4;
 	mso-font-charset:129;
 	mso-generic-font-family:modern;
 	mso-font-pitch:variable;
 	mso-font-signature:-1879048145 701988091 18 0 524289 0;}
+@font-face
+	{font-family:"\@굴림";
+	panose-1:2 11 6 0 0 1 1 1 1 1;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
 @font-face
 	{font-family:"\@KoPubWorld바탕체 Medium";
 	panose-1:0 0 6 0 0 0 0 0 0 0;
@@ -313,8 +329,10 @@ h1
 	mso-outline-level:1;
 	font-size:16.0pt;
 	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"맑은 고딕";
 	mso-font-kerning:16.0pt;
-	mso-fareast-language:EN-US;}
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
 h2
 	{mso-style-unhide:no;
 	mso-style-qformat:yes;
@@ -328,7 +346,9 @@ h2
 	mso-outline-level:2;
 	font-size:14.0pt;
 	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"맑은 고딕";
 	mso-fareast-language:EN-US;
+	font-weight:bold;
 	font-style:italic;}
 p.MsoHeader, li.MsoHeader, div.MsoHeader
 	{mso-style-unhide:no;
@@ -395,6 +415,16 @@ p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
 	font-family:"Courier New";
 	mso-fareast-font-family:"맑은 고딕";
 	mso-fareast-language:EN-US;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:굴림;
+	mso-bidi-font-family:굴림;}
 p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	{mso-style-noshow:yes;
 	mso-style-unhide:no;
@@ -480,9 +510,10 @@ EN-AU'><o:p></o:p></span></p>
 mso-hyphenate:none'><span lang=EN-AU style='font-size:16.0pt;mso-ansi-language:
 EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
- mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
   <td width=492 valign=top style='width:369.25pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -509,65 +540,68 @@ EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 mso-pagination:none;mso-hyphenate:none'><span lang=EN-AU style='font-size:16.0pt;
 mso-ansi-language:EN-AU;mso-fareast-language:KO'>It came to pass. : </span><span
 style='font-size:16.0pt;font-family:"KoPubWorld바탕체 Medium";mso-ansi-language:
-EN-AU;mso-fareast-language:KO'>그 일이 일어났다<span lang=EN-AU>.</span></span><span
-lang=EN-AU style='font-size:16.0pt;mso-ansi-language:EN-AU'><o:p></o:p></span></p>
+EN-AU;mso-fareast-language:KO'>그 일이 일어났다<span lang=EN-AU>. (</span></span><span
+lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:"KoPubWorld바탕체 Medium";
+mso-ansi-language:EN-AU;mso-fareast-language:KO'>1 Samuel 8:1</span><span
+lang=EN-AU style='font-size:16.0pt;font-family:"KoPubWorld바탕체 Medium";
+mso-ansi-language:EN-AU;mso-fareast-language:KO'>)<o:p></o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-fareast-font-family:
+"KoPubWorld바탕체 Medium";mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
-style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-AU style='font-size:16.0pt;mso-ansi-language:
+EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
 style='font-size:16.0pt;mso-ansi-language:EN-AU;mso-fareast-language:KO'><o:p>&nbsp;</o:p></span></p>
