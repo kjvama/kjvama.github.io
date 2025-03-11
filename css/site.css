@@ -1,0 +1,51 @@
+header {position: relative; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+header h1 {position: absolute; left: 0; top: 0; padding: 0 0 0 26px;}
+header h1 a {display: block; width: 176px; height: 65px; background: url(../images/kjvama_logo1.PNG) no-repeat center;}
+header nav ul {text-align: center; font-size: 0;}
+header nav ul li {display: inline-block;}
+header nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size: 18px; color: #000;}
+header .util {position: absolute; right: 0; top: 0;}
+header .util a {display: inline-block; position: relative; padding: 0 18px; line-height: 69px; font-size: 12px; color: #333; vertical-align: middle;}
+header .util a ~ a:before {content: ""; position: absolute; left: 0; top: 50%; width: 1px; height: 9px; transform: translateY(-50%); background: #ddd;}
+header .util button {width: 60px; height: 55px; background: #1a119e; color:#fff; font-size:28.0pt;}
+
+.tab {padding: 43px 0 50px;}
+.tab ul {display: flex; flex-wrap: wrap; border-top: 1px solid #ccc; border-left: 1px solid #ccc;}
+.tab ul li {width: 25%; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; box-sizing: border-box;}
+.tab ul li button {width: 100%; background: none; height: 58px; text-align: center; font-size: 18px; color: #666; box-sizing: border-box; outline: 0; cursor: pointer;}
+.tab ul li button {font-family: "Times New Roman", Times, serif;}
+.tab ul li button:focus,
+.tab ul li.on button {border: 1px solid #222; color: #222; font-weight: bold; background: #DFDDFB;}
+.tab ul li.empty {background:#e5e5e5;}
+.tab ul li.line {background:#1a119e; line-height: 1px;}
+.tab_content {display: none; line-height: 261px; background: #e5e5e5; text-align: center; font-size: 40px; color: #000;}
+.tab_content.on {display: block;}
+
+.ie9 .tab ul:after {content: ""; display: block; clear: both;}
+.ie9 .tab ul li {float: left;}
+
+.contents_style {padding: 20px; }
+.contents_style > p, h4, h2 {font-family: "Times New Roman", Times, serif; color:#000;}
+.contents_style > p {font-size:16.0pt;}
+.contents_style > h4 {font-size: 18.0pt; font-weight:normal;}
+.contents_style > h2 {font-size: 28.0pt;}
+
+footer {padding-top:100px;}
+footer .top {background: #383f43;}
+footer .top > div {width:1180px; margin:0 auto; padding:13px 0;}
+footer .top > div ul {float:left;}
+footer .top > div ul li {float:left; position:relative; padding:0 19px 0 0;}
+footer .top > div ul li:after {content:""; position:absolute; right:9px; top:50%; margin-top:-4px; width:1px; height:8px; background: #70767a; }
+footer .top > div ul li a {color:#fff; font-size:13px; line-height:45px;}
+footer .top > div ul li:last-child::after {display:none;}
+footer .top > div div {float:right;}
+footer .top > div div p {display:inline-block; width:242px; height:45px; background:#2a3033; color:#fff; text-align:center; line-height:45px; font-size:13px;}
+footer .top > div div p string {padding:0 0 0 15px; font-size:20px;}
+footer .top > div div select {padding:0 0 0 21px; width:200px; height:41px; color:#191919; font-size:12px; box-sizing: border-box; border:none; vertical-align: 3px;}
+
+footer .btm {padding:40px 0 44px; background: #4c5459; text-align: center;}
+footer .btm p {display:inline-block; width:176px; height:65px; background: url(../images/kjvama_logo2.png) no-repeat center;}
+footer .btm ul {padding:32px 0 14px;}
+footer .btm li {display: inline-block; position:relative; padding:0 10px; color:#fff; font-size:14px;}
+footer .btm li:after {content:""; position:absolute; right:0; top:50%; margin-top:-4px; width:1px; height:8px; background:#70767a;}
+footer .btm address {font-size:14px; color:#fff;}
