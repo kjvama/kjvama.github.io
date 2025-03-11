@@ -1,6 +1,6 @@
 header {position: relative; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
 header h1 {position: absolute; left: 0; top: 0; padding: 0 0 0 26px;}
-header h1 a {display: block; width: 176px; height: 65px; background: url(../images/kjvama_logo1.PNG) no-repeat center;}
+header h1 a {display: block; width: 176px; height: 65px; background: url(../images/kjvama_logo1.png) no-repeat center;}
 header nav ul {text-align: center; font-size: 0;}
 header nav ul li {display: inline-block;}
 header nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size: 18px; color: #000;}
