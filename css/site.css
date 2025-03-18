@@ -31,6 +31,7 @@ div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size
 .contents_style {padding: 4px 20px 20px 20px; }
 .contents_style > p, h4, h2 {font-family: "Times New Roman", Times, serif; color:#000;}
 .contents_style > p {font-size:16.0pt;}
+.contents_style > p.chapter {padding-top:20px;}
 .contents_style > h4 {font-size: 18.0pt; font-weight:normal;}
 .contents_style > h2 {font-size: 28.0pt;}
 .blog { padding: 60px 20px 20px 20px; }
