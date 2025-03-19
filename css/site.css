@@ -14,9 +14,12 @@ div nav ul li {display: inline-block;}
 div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size: 18px; color: #000;}
 
 .tab {padding: 43px 0 50px; }
-.tab ul {display: flex; flex-wrap: wrap; height:177px; overflow-y:auto; border-top: 1px solid #ccc; border-left: 1px solid #ccc;}
+.tab ul {display: flex; flex-wrap: wrap; height:177px; overflow-y:auto; border-top: 1px solid #ccc; border-left: 1px solid #ccc; border-bottom:2px solid #24009C;}
+.tab ul.thead,
 .tab ul.tfoot,
 .tab ul.main {height:auto; overflow-y:hidden;}
+.tab ul.tfoot,
+.tab ul.main {border-bottom: 0;}
 .tab ul.tfoot { border-top:2px solid #24009C; }
 .tab ul li {width: 25%; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; box-sizing: border-box;}
 .tab ul li button {width: 100%; background: none; height: 58px; text-align: center; font-size: 18px; color: #666; box-sizing: border-box; outline: 0; cursor: pointer;}
@@ -51,7 +54,7 @@ p > span.content > text.leftpad {font-weight:normal; display: block; padding:0 0
   
 #btntop:hover { background-color: #959393; }
 
-footer {padding-top:100px;}
+footer {padding-top:50px;}
 footer .top {background: #383f43;}
 footer .top > div {width:1180px; margin:0 auto; padding:13px 0;}
 footer .top > div ul {float:left;}
