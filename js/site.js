@@ -10,10 +10,10 @@ if (bookbuttons !== null) {
     }
 }
 
-const back = document.getElementById("back");
+const backbutton = document.getElementById("back");
 
-if (back !== null) {
-    back.addEventListener("click", goBack);
+if (backbutton !== null) {
+    backbutton.addEventListener("click", goBack);
 
     function goBack(e) {
         history.back();
