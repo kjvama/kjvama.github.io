@@ -60,3 +60,25 @@ if (topbutton !== null) {
         }
       }
 }
+
+const versebuttons = document.querySelectorAll('.contents_style button');
+
+if (versebuttons !== null) {
+  for (var index = 0; index < versebuttons.length; index++) {
+    versebuttons[index].addEventListener("click", showVerse);
+  }
+
+  function showVerse(e) {
+    let verse = document.getElementById(this.id + "-1");
+    let chunk = document.getElementById(this.id + "-2");
+
+    if (verse.style.display === "none") {
+      verse.style.display = "inline";
+      chunk.style.display = "none";
+    }
+    else {
+      verse.style.display = "none";
+      chunk.style.display = "inline";
+    }
+  }
+}
