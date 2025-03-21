@@ -72,6 +72,8 @@ if (versebuttons !== null) {
     let verse = document.getElementById(this.id + "-1");
     let chunk = document.getElementById(this.id + "-2");
 
+    this.style.fontSize = "26.0pt";
+
     if (verse.style.display === "none") {
       verse.style.display = "inline";
       verse.style.fontSize = "26.0pt";
