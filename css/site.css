@@ -37,7 +37,7 @@ div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size
 .contents_style {padding: 4px 20px 20px 20px; }
 .contents_style > p, h4, h2 {font-family: "Times New Roman", Times, serif; color:#000;}
 .contents_style > p {font-size:20.0pt;}
-.contents_style > p button {font-family: "Times New Roman", Times, serif; font-size:16.0pt; color:#000; background-color: transparent; vertical-align:bottom;}
+.contents_style > p button {font-size:20.0pt; font-family: "Times New Roman", Times, serif; color:#000; background-color: transparent; vertical-align:bottom;}
 .contents_style > p span span {text-transform: uppercase;}
 .contents_style > p.chapter {padding-top:20px;}
 .contents_style > p span.verse {display:inline;}
