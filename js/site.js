@@ -74,11 +74,13 @@ if (versebuttons !== null) {
 
     if (verse.style.display === "none") {
       verse.style.display = "inline";
+      verse.style.fontSize = "26.0pt";
       chunk.style.display = "none";
     }
     else {
       verse.style.display = "none";
       chunk.style.display = "inline";
+      chunk.style.fontSize = "26.0pt";
     }
   }
 }
