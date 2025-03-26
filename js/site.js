@@ -61,7 +61,7 @@ if (topbutton !== null) {
       }
 }
 
-const versebuttons = document.querySelectorAll('.contents_style button');
+const versebuttons = document.querySelectorAll('.contents_style button.verse');
 
 if (versebuttons !== null) {
   for (var index = 0; index < versebuttons.length; index++) {
@@ -85,4 +85,17 @@ if (versebuttons !== null) {
       chunk.style.fontSize = "26.0pt";
     }
   }
+}
+
+const verseaudiobuttons = document.querySelectorAll(".contents_style button.audio");
+
+if (verseaudiobuttons !== null) {
+    for (var index = 0; index < verseaudiobuttons.length; index++) {
+      verseaudiobuttons[index].addEventListener("click", clickedOnTheAudioButton);
+    }
+
+    function clickedOnTheAudioButton(e) {
+      let audio = document.querySelector("audio#" + this.id);
+      audio.play();
+    }
 }
