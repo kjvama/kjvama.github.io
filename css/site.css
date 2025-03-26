@@ -58,6 +58,8 @@ p > span.content > text.leftpad {font-weight:normal; display: block; padding:0 0
   
 #btntop:hover { background-color: #959393; }
 
+audio.verse { display:none; }
+
 footer {padding-top:50px;}
 footer .top {background: #383f43;}
 footer .top > div {width:1180px; margin:0 auto; padding:13px 0;}
