@@ -35,13 +35,17 @@ div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size
 .ie9 .tab ul li {float: left;}
 
 .contents_style {padding: 4px 20px 20px 20px; }
-.contents_style > p, h4, h2 {font-family: "Times New Roman", Times, serif; color:#000;}
+.contents_style > p, h6, h5, h4, h2 {font-family: "Times New Roman", Times, serif; color:#000;}
 .contents_style > p {font-size:20.0pt;}
 .contents_style > p button {font-size:20.0pt; font-family: "Times New Roman", Times, serif; color:#000; background-color: transparent; vertical-align:bottom;}
 .contents_style > p span span.lord {text-transform: uppercase;}
 .contents_style > p.chapter {padding-top:20px;}
+.contents_style > p.toppad {padding-top:6px;}
 .contents_style > p span.verse {display:inline;}
 .contents_style > p span.chunk {display:none;}
+.contents_style > p span.keyword {display:inline-block; margin-top: 6px; padding:6px; border:1px solid #C0C0C0; border-radius: 10px; font-size:19.0pt; font-weight:bold;}
+.contents_style > h6 {font-size: 27.0pt;}
+.contents_style > h5 {font-size: 23.0pt; font-weight:normal; padding-left:30px; background: url(../images/icon.gif) no-repeat 0 50%;}
 .contents_style > h4 {font-size: 30.0pt; font-weight:normal;}
 .contents_style > h2 {font-size: 40.0pt;}
 .blog { padding: 60px 20px 20px 20px; }
@@ -59,6 +63,12 @@ p > span.content > text.leftpad {font-weight:normal; display: block; padding:0 0
 #btntop:hover { background-color: #959393; }
 
 audio.verse { display:none; }
+img.leftpad { padding:0 0 0 5px; }
+
+a.osite:link { padding-right:15px; background: url(../images/link_icon.gif) no-repeat center right; }
+a.osite:visited { color: purple; }
+a.osite:hover { color:blue; border-bottom: 1px solid blue; }
+a.osite:active { color:red; }
 
 footer {padding-top:50px;}
 footer .top {background: #383f43;}
