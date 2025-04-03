@@ -32,6 +32,18 @@ if (chapterbuttons !== null) {
     }
 }
 
+const anchorbuttons = document.querySelectorAll('.tab .anchor');
+
+if (anchorbuttons !== null) {
+    for (const button of anchorbuttons) {
+      button.addEventListener('click', function () {
+        const scrollPosition = document.querySelector(this.dataset.target).offsetTop;
+
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+      });
+    }
+}
+
 const topbutton = document.getElementById('btntop');
 
 if (topbutton !== null) {
