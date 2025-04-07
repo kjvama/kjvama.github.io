@@ -34,7 +34,8 @@ div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size
 .ie9 .tab ul:after {content: ""; display: block; clear: both;}
 .ie9 .tab ul li {float: left;}
 
-.contents_style {padding: 4px 0 20px 0; width:99%;}
+.contents_style {padding: 4px 0 20px 0; width:99%; cursor:text;}
+.contents_style::selection {background-color: #EDC2D6;}
 .contents_style > p, h6, h5, h4, h2 {font-family: "Times New Roman", Times, serif; color:#000;}
 .contents_style > p {padding:0 0 0 8px; font-size:20.0pt; word-break: normal;}
 .contents_style > p button {font-size:20.0pt; font-family: "Times New Roman", Times, serif; color:#000; background-color: transparent; vertical-align:bottom;}
