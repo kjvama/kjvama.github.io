@@ -111,3 +111,17 @@ if (verseaudiobuttons !== null) {
       audio.play();
     }
 }
+
+const chaptertitle = document.querySelectorAll(".contents_style p.chapter");
+
+if (chaptertitle !== null) {
+  let doctitle = document.title;
+  let title = doctitle.replace("PCE - ", "");
+  for (var index = 0; index < chaptertitle.length; index++) {
+    let booktag = document.createElement("span");
+    let bookname = document.createTextNode(title);
+    booktag.setAttribute("class", "bookname");
+    booktag.appendChild(bookname);
+    chaptertitle[index].innerHTML = booktag.outerHTML + "&nbsp;" + chaptertitle[index].innerHTML;
+  }
+}
