@@ -81,6 +81,7 @@ if (versebuttons !== null) {
   }
 
   function showVerse(e) {
+    //console.log("Coming soon!");
     let verse = document.getElementById(this.id + "-1");
     let chunk = document.getElementById(this.id + "-2");
 
