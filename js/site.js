@@ -125,3 +125,85 @@ if (chaptertitle !== null) {
     chaptertitle[index].innerHTML = booktag.outerHTML + "&nbsp;" + chaptertitle[index].innerHTML;
   }
 }
+
+const copybuttons = document.querySelectorAll(".contents_style button.copy");
+
+if (copybuttons !== null) {
+  let doctitle = document.title;
+  let title = doctitle.replace("PCE - ", "");
+  for (var index = 0; index < copybuttons.length; index++) {
+    let btntag = copybuttons[index];
+    let versebtn = btntag.parentElement.children[0];
+    let versespan = btntag.parentElement.children[1];
+
+    btntag.onclick = function() {
+      const bookverse = title + " " + versebtn.getAttribute("id").replace("-", ":");
+      const copyhtml = versespan.innerHTML;
+      const copytext = " <p>" + copyhtml + "</p>";
+
+      const blobHtml = new Blob([bookverse + copyhtml], { type: "text/html" });
+      const blobText = new Blob([bookverse + copytext], { type: "text/plain" });
+
+      const data = [new ClipboardItem({
+         ["text/plain"]: blobText,
+         ["text/html"]: blobHtml,
+      })];
+
+      navigator.clipboard.write(data).then(() => {
+        alert("Copied to clipboard!");
+        btntag.setAttribute("class", "copied");
+        btntag.innerText = "Copied!";
+
+        setTimeout(() => {
+          btntag.setAttribute("class", "copy");
+          btntag.innerText = "Copy";
+        }, 5000);
+      });
+    };
+
+    navigator.clipboard.addEventListener("clipboardchange", e => {
+      navigator.clipboard.getText().then(text => {
+        console.log('Updated clipboard contents: '+text);
+      });
+    });
+
+    const PERMISSIONS = [
+      { name: "clipboard-read" },
+      { name: "clipboard-write" }
+    ];
+
+    Promise.all(
+      PERMISSIONS.map( descriptor => navigator.permissions.query(descriptor) )
+    ).then( permissions => {
+      permissions.forEach( (status, index) => {
+        let descriptor = PERMISSIONS[index],
+          name = permissionName(descriptor),
+          btn = document.createElement('button');
+        btn.title = 'Click to request permission';
+        btn.textContent = name;
+        
+        // Clicking a button (re-)requests that permission:
+        btn.onclick = () => {
+          navigator.permissions.request(descriptor)
+            .then( status => { log(`Permission ${status.state}.`); })
+            .catch( err => { log(`Permission denied: ${err}`); });
+        };
+        
+        // If the permission status changes, update the button to show it
+        status.onchange = () => {
+          btn.setAttribute('data-state', status.state);
+        };
+        status.onchange();
+      });
+    });
+  }
+
+  function permissionName(permission) {
+    let name = permission.name.split('-').pop();
+    if ('allowWithoutGesture' in permission) {
+      name += ' ' + (permission.allowWithoutGesture ? '(without gesture)' : '(with gesture)');
+    }
+    return name;
+  }
+}
+
