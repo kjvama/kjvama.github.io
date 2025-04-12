@@ -39,6 +39,7 @@ div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size
 .contents_style > p, h6, h5, h4, h2 {font-family: "Times New Roman", Times, serif; color:#000;}
 .contents_style > p {padding:0 0 0 8px; font-size:20.0pt; word-break: normal;}
 .contents_style > p button {font-size:20.0pt; font-family: "Times New Roman", Times, serif; color:#000; background-color: transparent; vertical-align:bottom;}
+.contents_style > p span span.god,
 .contents_style > p span span.lord {text-transform: uppercase;}
 .contents_style > p.chapter {margin:10px 0 10px 0; padding:20px 0 16px 0; background-color:#E6DFFF; color:#000;}
 .contents_style > p.chapter span.bookname {color:#6437FF;}
@@ -46,6 +47,9 @@ div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size
 .contents_style > p span.verse {display:inline;}
 .contents_style > p span.chunk {display:none;}
 .contents_style > p span.keyword {display:inline-block; margin-top: 6px; padding:6px; border:1px solid #C0C0C0; border-radius: 10px; font-size:19.0pt; font-weight:bold;}
+.contents_style > p button.copy {margin: 0 0 3px 5px; padding: 0 5px 0px 5px; background-color: #EEDBE8; font-size:15.0pt; color: #000; border:1px solid #000;}
+
+.contents_style > p button.copied {margin: 0 0 3px 5px; padding: 0 5px 0px 5px; background-color: #8C8DBD; font-size:15.0pt; color: #fff; border:1px solid #000;}
 .contents_style > h6 {font-size: 27.0pt;}
 .contents_style > h5 {font-size: 23.0pt; font-weight:normal; padding-left:30px; background: url(../images/icon.gif) no-repeat 0 50%;}
 .contents_style > h4 {font-size: 30.0pt; font-weight:normal;}
