@@ -1,13 +1,20 @@
-const bookbuttons = document.querySelectorAll(".tab .book");
+const downloadbutton = document.getElementById("plan");
 
-if (bookbuttons !== null) {
-    for (var index = 0; index < bookbuttons.length; index++) {
-        bookbuttons[index].addEventListener("click", clicked);
-    }
+if (downloadbutton !== null) {
+  downloadbutton.addEventListener("click", downloadPlan);
 
-    function clicked(e) {
-      location.href = this.id + ".htm";
-    }
+  function downloadPlan(e) {
+      let atag = document.createElement('a');
+      let downloadurl = "download/bible-reading-plan.pdf";
+      document.body.appendChild(atag);
+      atag.download = "bible-reading-plan.pdf";
+      atag.href = downloadurl;
+      atag.target = "_blank";
+
+      atag.click();
+      document.body.removeChild(atag);
+      window.URL.revokeObjectURL(downloadurl);
+  }
 }
 
 const backbutton = document.getElementById("back");
@@ -17,6 +24,18 @@ if (backbutton !== null) {
 
     function goBack(e) {
         history.back();
+    }
+}
+
+const bookbuttons = document.querySelectorAll(".tab .book");
+
+if (bookbuttons !== null) {
+    for (var index = 0; index < bookbuttons.length; index++) {
+        bookbuttons[index].addEventListener("click", clicked);
+    }
+
+    function clicked(e) {
+      location.href = this.id + ".htm";
     }
 }
 
