@@ -14,7 +14,7 @@ div nav ul {text-align: center; font-size: 0;}
 div nav ul li {display: inline-block;}
 div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size: 18px; color: #000;}
 
-.tab {padding: 43px 0 50px; }
+.tab {padding: 10px 0 50px 0; }
 .tab ul {display: flex; flex-wrap: wrap; height:177px; overflow-y:auto; border-top: 1px solid #ccc; border-left: 1px solid #ccc; border-bottom:2px solid #24009C;}
 .tab ul.thead,
 .tab ul.tfoot,
@@ -34,6 +34,11 @@ div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size
 
 .ie9 .tab ul:after {content: ""; display: block; clear: both;}
 .ie9 .tab ul li {float: left;}
+
+.text {padding:24px 0 14px 24px; cursor:text;}
+.text > i,
+.text > p {font-family: "Times New Roman", Times, serif; color:#000; font-size:20.0pt; word-break: normal;}
+.text > p.toppad {padding-top: 14px; font-size:16.0pt}
 
 .contents_style {padding: 4px 0 20px 0; width:99%; cursor:text;}
 .contents_style::selection {background-color: #EDC2D6;}
