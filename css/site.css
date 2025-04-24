@@ -14,7 +14,7 @@ div nav ul {text-align: center; font-size: 0;}
 div nav ul li {display: inline-block;}
 div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size: 18px; color: #000;}
 
-.tab {padding: 10px 0 50px 0; }
+.tab {padding: 40px 0 50px 0; }
 .tab ul {display: flex; flex-wrap: wrap; height:177px; overflow-y:auto; border-top: 1px solid #ccc; border-left: 1px solid #ccc; border-bottom:2px solid #24009C;}
 .tab ul.thead,
 .tab ul.tfoot,
@@ -35,10 +35,16 @@ div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size
 .ie9 .tab ul:after {content: ""; display: block; clear: both;}
 .ie9 .tab ul li {float: left;}
 
-.text {padding:24px 0 14px 24px; cursor:text;}
-.text > i,
-.text > p {font-family: "Times New Roman", Times, serif; color:#000; font-size:20.0pt; word-break: normal;}
+.text {padding:24px 0 24px 24px; cursor:text;}
+.text > p, h2, i {font-family: "Times New Roman", Times, serif; color:#000; font-size:20.0pt; word-break: normal;}
 .text > p.toppad {padding-top: 14px; font-size:16.0pt}
+.text > p.indent {padding: 10px 0 0 2px;}
+.text > p > span.flet {font-size:21.0pt; color:#24009C;}
+.text > p > a {font-size:14.0pt;}
+.text > p > a:link { padding-right:15px; background: url(../images/link_icon.gif) no-repeat center right; }
+.text > p > a:visited { color: purple; }
+.text > p > a:hover { color:blue; border-bottom: 1px solid blue; }
+.text > p > a:active { color:red; }
 
 .contents_style {padding: 4px 0 20px 0; width:99%; cursor:text;}
 .contents_style::selection {background-color: #EDC2D6;}
@@ -76,6 +82,7 @@ p > span.content > text.leftpad {font-weight:normal; display: block; padding:0 0
 
 audio.verse { display:none; }
 img.leftpad { padding:0 0 0 5px; }
+hr {display:block; width: 90%; margin:0px auto; background-color:#000;}
 
 a.osite:link { padding-right:15px; background: url(../images/link_icon.gif) no-repeat center right; }
 a.osite:visited { color: purple; }
