@@ -30,12 +30,12 @@ if (backbutton !== null) {
 const bookbuttons = document.querySelectorAll(".tab .book");
 
 if (bookbuttons !== null) {
-    for (let index = 0; index < bookbuttons.length; index++) {
+    for (var index = 0; index < bookbuttons.length; index++) {
         bookbuttons[index].addEventListener("click", clicked);
     }
 
     function clicked(e) {
-      location.href = "/book/" + this.id;
+      location.href = this.id + ".htm";
     }
 }
 
@@ -66,29 +66,36 @@ if (anchorbuttons !== null) {
 const topbutton = document.getElementById('btntop');
 
 if (topbutton !== null) {
-    /*
     topbutton.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        moveToTheTop();
     });
-    */
-
-    topbutton.onclick = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
 
     window.addEventListener('scroll', () => {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 20) {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 20
+        ) {
             topbutton.style.display = 'block';
         } else {
             topbutton.style.display = 'none';
         }
       });
+      
+      function moveToTheTop() {
+        const position = document.documentElement.scrollTop || document.body.scrollTop;
+        if (position) {
+          window.requestAnimationFrame(() => {
+            window.scrollTo(0, position - position / 10);
+            moveToTheTop();
+          });
+        }
+      }
 }
 
 const versebuttons = document.querySelectorAll('.contents_style button.verse');
 
 if (versebuttons !== null) {
-  for (let index = 0; index < versebuttons.length; index++) {
+  for (var index = 0; index < versebuttons.length; index++) {
     versebuttons[index].addEventListener("click", showVerse);
   }
 
@@ -115,7 +122,7 @@ if (versebuttons !== null) {
 const verseaudiobuttons = document.querySelectorAll(".contents_style button.audio");
 
 if (verseaudiobuttons !== null) {
-    for (let index = 0; index < verseaudiobuttons.length; index++) {
+    for (var index = 0; index < verseaudiobuttons.length; index++) {
       verseaudiobuttons[index].addEventListener("click", clickedOnTheAudioButton);
     }
 
@@ -130,7 +137,7 @@ const chaptertitle = document.querySelectorAll(".contents_style p.chapter");
 if (chaptertitle !== null) {
   let doctitle = document.title;
   let title = doctitle.replace("PCE - ", "");
-  for (let index = 0; index < chaptertitle.length; index++) {
+  for (var index = 0; index < chaptertitle.length; index++) {
     let booktag = document.createElement("span");
     let bookname = document.createTextNode(title);
     booktag.setAttribute("class", "bookname");
@@ -144,7 +151,7 @@ const copybuttons = document.querySelectorAll(".contents_style button.copy");
 if (copybuttons !== null) {
   let doctitle = document.title;
   let title = doctitle.replace("PCE - ", "");
-  for (let index = 0; index < copybuttons.length; index++) {
+  for (var index = 0; index < copybuttons.length; index++) {
     let btntag = copybuttons[index];
     let versebtn = btntag.parentElement.children[0];
     let versespan = btntag.parentElement.children[1];
