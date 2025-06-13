@@ -30,7 +30,7 @@ if (backbutton !== null) {
 const bookbuttons = document.querySelectorAll(".tab .book");
 
 if (bookbuttons !== null) {
-    for (var index = 0; index < bookbuttons.length; index++) {
+    for (let index = 0; index < bookbuttons.length; index++) {
         bookbuttons[index].addEventListener("click", clicked);
     }
 
@@ -101,7 +101,7 @@ if (topbutton !== null) {
 const versebuttons = document.querySelectorAll('.contents_style button.verse');
 
 if (versebuttons !== null) {
-  for (var index = 0; index < versebuttons.length; index++) {
+  for (let index = 0; index < versebuttons.length; index++) {
     versebuttons[index].addEventListener("click", showVerse);
   }
 
@@ -128,7 +128,7 @@ if (versebuttons !== null) {
 const verseaudiobuttons = document.querySelectorAll(".contents_style button.audio");
 
 if (verseaudiobuttons !== null) {
-    for (var index = 0; index < verseaudiobuttons.length; index++) {
+    for (let index = 0; index < verseaudiobuttons.length; index++) {
       verseaudiobuttons[index].addEventListener("click", clickedOnTheAudioButton);
     }
 
@@ -143,7 +143,7 @@ const chaptertitle = document.querySelectorAll(".contents_style p.chapter");
 if (chaptertitle !== null) {
   let doctitle = document.title;
   let title = doctitle.replace("PCE - ", "");
-  for (var index = 0; index < chaptertitle.length; index++) {
+  for (let index = 0; index < chaptertitle.length; index++) {
     let booktag = document.createElement("span");
     let bookname = document.createTextNode(title);
     booktag.setAttribute("class", "bookname");
@@ -157,7 +157,7 @@ const copybuttons = document.querySelectorAll(".contents_style button.copy");
 if (copybuttons !== null) {
   let doctitle = document.title;
   let title = doctitle.replace("PCE - ", "");
-  for (var index = 0; index < copybuttons.length; index++) {
+  for (let index = 0; index < copybuttons.length; index++) {
     let btntag = copybuttons[index];
     let versebtn = btntag.parentElement.children[0];
     let versespan = btntag.parentElement.children[1];
