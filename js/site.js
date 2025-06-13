@@ -67,7 +67,11 @@ const topbutton = document.getElementById('btntop');
 
 if (topbutton !== null) {
     topbutton.addEventListener('click', function () {
-        moveToTheTop();
+        /*moveToTheTop();*/
+
+        topbutton.onclick = () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
     });
 
     window.addEventListener('scroll', () => {
@@ -81,6 +85,7 @@ if (topbutton !== null) {
         }
       });
       
+      /*
       function moveToTheTop() {
         const position = document.documentElement.scrollTop || document.body.scrollTop;
         if (position) {
@@ -90,6 +95,7 @@ if (topbutton !== null) {
           });
         }
       }
+      */
 }
 
 const versebuttons = document.querySelectorAll('.contents_style button.verse');
