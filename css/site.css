@@ -83,6 +83,8 @@ p > span.content > text.leftpad {font-weight:normal; display: block; padding:0 0
 audio.verse { display:none; }
 img.leftpad { padding:0 0 0 5px; }
 hr {display:block; width: 90%; margin:0px auto; background-color:#000;}
+h2.bookname {text-align:center;}
+h2.bookname > span {color:#000;}
 
 a.osite:link { padding-right:15px; background: url(../images/link_icon.gif) no-repeat center right; }
 a.osite:visited { color: purple; }
