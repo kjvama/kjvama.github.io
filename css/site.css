@@ -59,7 +59,8 @@ div nav ul li a {display: block; padding: 0 47.5px; line-height: 55px; font-size
 .contents_style > p span.verse {display:inline;}
 .contents_style > p span.chunk {display:none;}
 .contents_style > p span.keyword {display:inline-block; margin-top: 6px; padding:6px; border:1px solid #C0C0C0; border-radius: 10px; font-size:19.0pt; font-weight:bold;}
-.contents_style > p button.copy {margin: 0 0 3px 5px; padding: 0 5px 0px 5px; background-color: #EEDBE8; font-size:15.0pt; color: #000; border:1px solid #000;}
+.contents_style > p button.verse {cursor:text;}
+.contents_style > p button.copy {margin: 0 0 3px 5px; padding: 0 5px 0px 5px; background-color: #EEDBE8; font-size:15.0pt; color: #000; border:1px solid #000; cursor:pointer;}
 
 .contents_style > p button.copied {margin: 0 0 3px 5px; padding: 0 5px 0px 5px; background-color: #8C8DBD; font-size:15.0pt; color: #fff; border:1px solid #000;}
 .contents_style > h6 {font-size: 27.0pt;}
