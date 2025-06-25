@@ -98,6 +98,7 @@ if (topbutton !== null) {
       */
 }
 
+/*
 const versebuttons = document.querySelectorAll('.contents_style button.verse');
 
 if (versebuttons !== null) {
@@ -124,6 +125,7 @@ if (versebuttons !== null) {
     }
   }
 }
+*/
 
 const verseaudiobuttons = document.querySelectorAll(".contents_style button.audio");
 
@@ -166,8 +168,8 @@ if (copybuttons !== null) {
 
     btntag.onclick = function() {
       const bookverse = title + " " + versebtn.getAttribute("id").replace("-", ":");
-      const copyhtml = versespan.innerHTML;
-      const copytext = " <p>" + copyhtml + "</p>";
+      const copyhtml = versespan.innerHTML.replace("<i>", "[").replace("</i>", "]");
+      const copytext = " " + copyhtml;
 
       const blobHtml = new Blob([bookverse + copyhtml], { type: "text/html" });
       const blobText = new Blob([bookverse + copytext], { type: "text/plain" });
