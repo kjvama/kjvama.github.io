@@ -168,10 +168,11 @@ if (copybuttons !== null) {
 
     btntag.onclick = function() {
       const bookverse = title + " " + versebtn.getAttribute("id").replace("-", ":");
-      const copyhtml = versespan.innerHTML.replace("<i>", "[").replace("</i>", "]");
-      const copytext = " " + copyhtml;
+      const copyhtml_first = versespan.innerHTML.replace(/<i>/g, "[");
+      const copyhtml_last = copyhtml_first.replace(/<\/i>/g, "]");
+      const copytext = " " + copyhtml_last;
 
-      const blobHtml = new Blob([bookverse + copyhtml], { type: "text/html" });
+      const blobHtml = new Blob([bookverse + copyhtml_last], { type: "text/html" });
       const blobText = new Blob([bookverse + copytext], { type: "text/plain" });
 
       const data = [new ClipboardItem({
@@ -180,7 +181,7 @@ if (copybuttons !== null) {
       })];
 
       navigator.clipboard.write(data).then(() => {
-        alert("Copied to clipboard!");
+        alert("[" + bookverse + "] Copied to clipboard!");
         btntag.setAttribute("class", "copied");
         btntag.innerText = "Copied!";
 
