@@ -140,7 +140,6 @@ if (verseaudiobuttons !== null) {
     }
 }
 
-/*
 const chaptertitle = document.querySelectorAll(".contents_style p.chapter");
 
 if (chaptertitle !== null) {
@@ -154,7 +153,6 @@ if (chaptertitle !== null) {
     chaptertitle[index].innerHTML = booktag.outerHTML + "&nbsp;" + chaptertitle[index].innerHTML;
   }
 }
-*/
 
 const copybuttons = document.querySelectorAll(".contents_style button.copy");
 
