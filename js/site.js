@@ -170,10 +170,11 @@ if (copybuttons !== null) {
       const copyhtml_last = copyhtml_first.replace(/<\/i>/g, "]");
       const copytext = " " + copyhtml_last;
 
-      const blank = "";
-      if (window.ontouchstart !== undefined) {
+      const blank = " ";
+      /* const blank = "";
+      if (window.matchMedia("(pointer:coarse)").matches) {
         blank = " ";
-      }
+      } */
       const blobHtml = new Blob([bookverse + blank + copyhtml_last], { type: "text/html" });
       const blobText = new Blob([bookverse + blank + copytext], { type: "text/plain" });
 
