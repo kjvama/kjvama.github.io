@@ -170,13 +170,8 @@ if (copybuttons !== null) {
       const copyhtml_last = copyhtml_first.replace(/<\/i>/g, "]");
       const copytext = " " + copyhtml_last;
 
-      const blank = " ";
-      /* const blank = "";
-      if (window.matchMedia("(pointer:coarse)").matches) {
-        blank = " ";
-      } */
-      const blobHtml = new Blob([bookverse + blank + copyhtml_last], { type: "text/html" });
-      const blobText = new Blob([bookverse + blank + copytext], { type: "text/plain" });
+      const blobHtml = new Blob([bookverse + " " + copyhtml_last], { type: "text/html" });
+      const blobText = new Blob([bookverse + " " + copytext], { type: "text/plain" });
 
       const data = [new ClipboardItem({
          ["text/plain"]: blobText,
