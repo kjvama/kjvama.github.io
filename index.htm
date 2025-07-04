@@ -1,158 +1,457 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>PCE Home</title>
-        <link rel="stylesheet" href="css/default.css">
-        <link rel="stylesheet" href="css/site.css">
-    </head>
-    <!--[if IE 9]><body class="ie9"><![endif]-->
-    <!--[if (gt IE 9)|!(IE)]><!-->
-    <body><!--<![endif]-->
-        <header>
-            <h1><a href="index.htm"><span class="hide">kjvama</span></a></h1>
-            <h2 class="hide">Main menu</h2>
-            <nav>
-              <ul>
-                <li><a href="index.htm">KJV Bible</a></li>
-              </ul>
-            </nav>
-            <div class="util">
-                <button id="plan" title="Download Bible Reading Plan">📥<span class="hide">Download Bible Reading Plan</span></button>
+<html>
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<title>PCE Home</title>
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
+		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="css/docs.css">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/custom.css">
+
+	</head>
+	<body data-spy="scroll" data-target=".nav-docs" data-offset="50">
+
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-full">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="top">
+							<ul>
+								<li>
+									<a href="index.htm" title="To Home"><img class="logo" height="30" src="img/logo.png" alt="KJVAMA"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="index.htm">Home</a></li>
+						</ul>
+					</div> -->
+				</div>
+			</nav>
+			
+			<div class="jumbotron">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-md-offset-2 logo-main">
+							<img src="img/logo-main.png" alt="KJVAMA">
+						</div>
+						<div class="col-md-4 col-md-offset-1">
+							<h1>Documentation</h1>
+							<ul>
+								<li>
+									<span>Version: <strong class="version">1.0.0</strong></span>
+								</li>
+								<li>
+									<span>Created: <strong><i class="fa fa-calendar"></i> 01/24/2025</strong></span>
+								</li>
+								<li>
+									<span>Latest Update: <strong><i class="fa fa-calendar"></i> 04/07/2025</strong></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 center">
+							<p class="lead">
+								This website encourages reading the Bible in its full context, helping readers move beyond chapter breaks to better understand the flow and meaning of Scripture.
+								It features the King James Bible in its <strong>Pure Cambridge Edition (PCE)</strong> - the historically received and trusted form of the Authorized Version.<br/>
+								<i class="fs">(Please note: while the biblical text itself is in the public domain, the design and presentation of this site are copyrighted. Copying or modifying this website without permission may violate copyright law.)</i>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<aside id="sidebar" class="sidebar">
+			<div class="nav-docs">
+				<ul class="nav nav-pills nav-stacked">
+					<li class="maintoppad">&nbsp;</li>
+					<li><a href="#books_info">Books Information</a></li>
+					<li><a href="#about_kjb">About the King James Bible</a></li>
+					<li><a href="#changelog">Changelog</a></li>
+				</ul>
+			</div>
+		</aside>
+		<div id="main" class="main">
+			<section id="books_info">
+				<h2>Books Information</h2>
+				<h4>CONTENTS</h4>
+				<p class="right"><button id="plan" title="Download Bible Reading Plan">📥<span>Download Bible Reading Plan</span></button></p>
+				<table width="100%" class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th colspan="6" class="center hdcolor">The books of the Old Testament</th>
+						</tr>
+						<tr>
+							<th class="center" style="width:6%;">No.</th>
+							<th class="center" style="width:30%;">Book Name</th>
+							<th class="center" style="width:14%;">Chapters</th>
+							<th class="center" style="width:6%;">No.</th>
+							<th class="center" style="width:30%;">Book Name</th>
+							<th class="center" style="width:14%;">Chapters</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="right">1</td>
+							<td><a class="arrow" href="genesis.htm" title="Genesis">Genesis</a></td>
+							<td class="center">50</td>
+							<td class="right">21</td>
+							<td><a class="arrow" href="ecclesiastes.htm" title="Ecclesiastes">Ecclesiastes</a></td>
+							<td class="center">12</td>
+						</tr>
+						<tr>
+							<td class="right">2</td>
+							<td><a class="arrow" href="exodus.htm" title="Exodus">Exodus</a></td>
+							<td class="center">40</td>
+							<td class="right">22</td>
+							<td><a class="arrow" href="song-of-solomon.htm" title="Song of Solomon">Song of Solomon</a></td>
+							<td class="center">8</td>
+						</tr>
+						<tr>
+							<td class="right">3</td>
+							<td><a class="arrow" href="leviticus.htm" title="Leviticus">Leviticus</a></td>
+							<td class="center">27</td>
+							<td class="right">23</td>
+							<td><a class="arrow" href="isaiah.htm" title="Isaiah">Isaiah</a></td>
+							<td class="center">66</td>
+						</tr>
+						<tr>
+							<td class="right">4</td>
+							<td><a class="arrow" href="numbers.htm" title="Numbers">Numbers</a></td>
+							<td class="center">36</td>
+							<td class="right">24</td>
+							<td><a class="arrow" href="jeremiah.htm" title="Jeremiah">Jeremiah</a></td>
+							<td class="center">52</td>
+						</tr>
+						<tr>
+							<td class="right">5</td>
+							<td><a class="arrow" href="deuteronomy.htm" title="Deuteronomy">Deuteronomy</a></td>
+							<td class="center">34</td>
+							<td class="right">25</td>
+							<td><a class="arrow" href="lamentations.htm" title="Lamentations">Lamentations</a></td>
+							<td class="center">5</td>
+						</tr>
+						<tr>
+							<td class="right">6</td>
+							<td><a class="arrow" href="joshua.htm" title="Joshua">Joshua</a></td>
+							<td class="center">24</td>
+							<td class="right">26</td>
+							<td><a class="arrow" href="ezekiel.htm" title="Ezekiel">Ezekiel</a></td>
+							<td class="center">48</td>
+						</tr>
+						<tr>
+							<td class="right">7</td>
+							<td><a class="arrow" href="judges.htm" title="Judges">Judges</a></td>
+							<td class="center">21</td>
+							<td class="right">27</td>
+							<td><a class="arrow" href="daniel.htm" title="Daniel">Daniel</a></td>
+							<td class="center">12</td>
+						</tr>
+						<tr>
+							<td class="right">8</td>
+							<td><a class="arrow" href="ruth.htm" title="Ruth">Ruth</a></td>
+							<td class="center">4</td>
+							<td class="right">28</td>
+							<td><a class="arrow" href="hosea.htm" title="Hosea">Hosea</a></td>
+							<td class="center">14</td>
+						</tr>
+						<tr>
+							<td class="right">9</td>
+							<td><a class="arrow" href="1samuel.htm" title="1 Samuel">1 Samuel</a></td>
+							<td class="center">31</td>
+							<td class="right">29</td>
+							<td><a class="arrow" href="joel.htm" title="Joel">Joel</a></td>
+							<td class="center">3</td>
+						</tr>
+						<tr>
+							<td class="right">10</td>
+							<td><a class="arrow" href="2samuel.htm" title="2 Samuel">2 Samuel</a></td>
+							<td class="center">24</td>
+							<td class="right">30</td>
+							<td><a class="arrow" href="amos.htm" title="Amos">Amos</a></td>
+							<td class="center">9</td>
+						</tr>
+						<tr>
+							<td class="right">11</td>
+							<td><a class="arrow" href="1kings.htm" title="1 Kings">1 Kings</a></td>
+							<td class="center">22</td>
+							<td class="right">31</td>
+							<td><a class="arrow" href="obadiah.htm" title="Obadiah">Obadiah</a></td>
+							<td class="center">1</td>
+						</tr>
+						<tr>
+							<td class="right">12</td>
+							<td><a class="arrow" href="2kings.htm" title="2 Kings">2 Kings</a></td>
+							<td class="center">25</td>
+							<td class="right">32</td>
+							<td><a class="arrow" href="jonah.htm" title="Jonah">Jonah</a></td>
+							<td class="center">4</td>
+						</tr>
+						<tr>
+							<td class="right">13</td>
+							<td><a class="arrow" href="1chronicles.htm" title="1 Chronicles">1 Chronicles</a></td>
+							<td class="center">29</td>
+							<td class="right">33</td>
+							<td><a class="arrow" href="micah.htm" title="Micah">Micah</a></td>
+							<td class="center">7</td>
+						</tr>
+						<tr>
+							<td class="right">14</td>
+							<td><a class="arrow" href="2chronicles.htm" title="2 Chronicles">2 Chronicles</a></td>
+							<td class="center">36</td>
+							<td class="right">34</td>
+							<td><a class="arrow" href="nahum.htm" title="Nahum">Nahum</a></td>
+							<td class="center">3</td>
+						</tr>
+						<tr>
+							<td class="right">15</td>
+							<td><a class="arrow" href="ezra.htm" title="Ezra">Ezra</a></td>
+							<td class="center">10</td>
+							<td class="right">35</td>
+							<td><a class="arrow" href="habakkuk.htm" title="Habakkuk">Habakkuk</a></td>
+							<td class="center">3</td>
+						</tr>
+						<tr>
+							<td class="right">16</td>
+							<td><a class="arrow" href="nehemiah.htm" title="Nehemiah">Nehemiah</a></td>
+							<td class="center">13</td>
+							<td class="right">36</td>
+							<td><a class="arrow" href="zephaniah.htm" title="Zephaniah">Zephaniah</a></td>
+							<td class="center">3</td>
+						</tr>
+						<tr>
+							<td class="right">17</td>
+							<td><a class="arrow" href="esther.htm" title="Esther">Esther</a></td>
+							<td class="center">10</td>
+							<td class="right">37</td>
+							<td><a class="arrow" href="haggai.htm" title="haggai">Haggai</a></td>
+							<td class="center">2</td>
+						</tr>
+						<tr>
+							<td class="right">18</td>
+							<td><a class="arrow" href="job.htm" title="Job">Job</a></td>
+							<td class="center">42</td>
+							<td class="right">38</td>
+							<td><a class="arrow" href="zechariah.htm" title="Zechariah">Zechariah</a></td>
+							<td class="center">14</td>
+						</tr>
+						<tr>
+							<td class="right">19</td>
+							<td><a class="arrow" href="psalms.htm" title="Psalms">Psalms</a></td>
+							<td class="center">150</td>
+							<td class="right">39</td>
+							<td><a class="arrow" href="malachi.htm" title="Malachi">Malachi</a></td>
+							<td class="center">4</td>
+						</tr>
+						<tr>
+							<td class="right">20</td>
+							<td><a class="arrow" href="proverbs.htm" title="Proverbs">Proverbs</a></td>
+							<td class="center">31</td>
+							<td colspan="3">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+				<table width="100%" class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th colspan="6" class="center hdcolor">The books of the New Testament</th>
+						</tr>
+						<tr>
+							<th class="center" style="width:6%;">No.</th>
+							<th class="center" style="width:30%;">Book Name</th>
+							<th class="center" style="width:14%;">Chapters</th>
+							<th class="center" style="width:6%;">No.</th>
+							<th class="center" style="width:30%;">Book Name</th>
+							<th class="center" style="width:14%;">Chapters</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="right">40</td>
+							<td><a class="arrow" href="matthew.htm" title="Matthew">Matthew</a></td>
+							<td class="center">28</td>
+							<td class="right">54</td>
+							<td><a class="arrow" href="1timothy.htm" title="1 Timothy">1 Timothy</a></td>
+							<td class="center">6</td>
+						</tr>
+						<tr>
+							<td class="right">41</td>
+							<td><a class="arrow" href="mark.htm" title="Mark">Mark</a></td>
+							<td class="center">16</td>
+							<td class="right">55</td>
+							<td><a class="arrow" href="2timothy.htm" title="2 Timothy">2 Timothy</a></td>
+							<td class="center">4</td>
+						</tr>
+						<tr>
+							<td class="right">42</td>
+							<td><a class="arrow" href="luke.htm" title="Luke">Luke</a></td>
+							<td class="center">24</td>
+							<td class="right">56</td>
+							<td><a class="arrow" href="titus.htm" title="Titus">Titus</a></td>
+							<td class="center">3</td>
+						</tr>
+						<tr>
+							<td class="right">43</td>
+							<td><a class="arrow" href="john.htm" title="John">John</a></td>
+							<td class="center">21</td>
+							<td class="right">57</td>
+							<td><a class="arrow" href="philemon.htm" title="Philemon">Philemon</a></td>
+							<td class="center">1</td>
+						</tr>
+						<tr>
+							<td class="right">44</td>
+							<td><a class="arrow" href="acts.htm" title="Acts">Acts</a></td>
+							<td class="center">28</td>
+							<td class="right">58</td>
+							<td><a class="arrow" href="hebrews.htm" title="Hebrews">Hebrews</a></td>
+							<td class="center">13</td>
+						</tr>
+						<tr>
+							<td class="right">45</td>
+							<td><a class="arrow" href="romans.htm" title="Romans">Romans</a></td>
+							<td class="center">16</td>
+							<td class="right">59</td>
+							<td><a class="arrow" href="james.htm" title="James">James</a></td>
+							<td class="center">5</td>
+						</tr>
+						<tr>
+							<td class="right">46</td>
+							<td><a class="arrow" href="1corinthians.htm" title="1 Corinthians">1 Corinthians</a></td>
+							<td class="center">16</td>
+							<td class="right">60</td>
+							<td><a class="arrow" href="1peter.htm" title="1 Peter">1 Peter</a></td>
+							<td class="center">5</td>
+						</tr>
+						<tr>
+							<td class="right">47</td>
+							<td><a class="arrow" href="2corinthians.htm" title="2 Corinthians">2 Corinthians</a></td>
+							<td class="center">13</td>
+							<td class="right">61</td>
+							<td><a class="arrow" href="2peter.htm" title="2 Peter">2 Peter</a></td>
+							<td class="center">3</td>
+						</tr>
+						<tr>
+							<td class="right">48</td>
+							<td><a class="arrow" href="galatians.htm" title="Galatians">Galatians</a></td>
+							<td class="center">6</td>
+							<td class="right">62</td>
+							<td><a class="arrow" href="1john.htm" title="1 John">1 John</a></td>
+							<td class="center">5</td>
+						</tr>
+						<tr>
+							<td class="right">49</td>
+							<td><a class="arrow" href="ephesians.htm" title="Ephesians">Ephesians</a></td>
+							<td class="center">6</td>
+							<td class="right">63</td>
+							<td><a class="arrow" href="2john.htm" title="2 John">2 John</a></td>
+							<td class="center">1</td>
+						</tr>
+						<tr>
+							<td class="right">50</td>
+							<td><a class="arrow" href="philippians.htm" title="Philippians">Philippians</a></td>
+							<td class="center">4</td>
+							<td class="right">64</td>
+							<td><a class="arrow" href="3john.htm" title="3 John">3 John</a></td>
+							<td class="center">1</td>
+						</tr>
+						<tr>
+							<td class="right">51</td>
+							<td><a class="arrow" href="colossians.htm" title="Colossians">Colossians</a></td>
+							<td class="center">4</td>
+							<td class="right">65</td>
+							<td><a class="arrow" href="jude.htm" title="Jude">Jude</a></td>
+							<td class="center">1</td>
+						</tr>
+						<tr>
+							<td class="right">52</td>
+							<td><a class="arrow" href="1thessalonians.htm" title="1 Thessalonians">1 Thessalonians</a></td>
+							<td class="center">5</td>
+							<td class="right">66</td>
+							<td><a class="arrow" href="revelation.htm" title="Revelation">Revelation</a></td>
+							<td class="center">22</td>
+						</tr>
+						<tr>
+							<td class="right">53</td>
+							<td><a class="arrow" href="2thessalonians.htm" title="2 Thessalonians">2 Thessalonians</a></td>
+							<td class="center">3</td>
+							<td colspan="3">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="about_kjb">
+				<h2>About the King James Bible</h2>
+				<h4>Why the King James Bible Still Matters Today</h4>
+				<p class="lead">
+					The King James Bible is often considered one of the greatest English translations of the Bible. It doesn’t just follow the original Hebrew and Greek closely - it also captures the beauty and rhythm of those texts in rich, poetic English that still touches hearts today.<br />
+					Many word-for-word translations from the original languages can feel stiff or awkward in English. But the King James Bible is different. It communicates the meaning clearly while also preserving the beauty and depth of the original writings. That’s what makes it stand out.
+				</p>
+				<p class="lead">
+					One of the hardest parts of translating the Bible is dealing with words that have more than one meaning. Every choice has to be made carefully, with deep respect for what God originally intended. That’s why accuracy and reverence matter so much in a Bible translation.<br />
+					In this way, the King James Bible shines. It stays true to the original texts that God has preserved over time, making it a trustworthy guide for anyone who wants to know what the Bible really says.
+				</p>
+				<p class="lead">
+					At the same time, we want to be clear: we don’t believe the King James Bible itself is divinely inspired. Only the original writings of the Bible are inspired by God. What makes the King James Bible special is how faithfully it preserves those inspired words in English.<br />
+					Throughout history, God has made His Word known through the common languages of the time - languages that people actually spoke and understood. Today, that language is English. And among all the English versions of the Bible, the King James stands out for its faithfulness and clarity. God has chosen not to speak through new inspiration, but through the careful preservation of His Word - and that’s what we see in the King James Bible.
+				</p>
+				<p class="lead">
+					If one day another language becomes the most widely spoken in the world, it would make sense for the Bible to be translated into that language too. But for now, English is the global standard, and the King James Bible remains the clearest and most complete English translation available. It doesn’t need to be updated or rewritten - its message still speaks powerfully today.
+				</p>
+				<p class="lead">
+					We encourage you to read the Bible regularly. Take time to think about what it says and how each part connects. The more you do, the more you’ll see just how deep and life-changing God’s Word really is.
+				</p>
+			</section>
+
+			<section id="changelog">
+				<h2>Changelog</h2>
+				<p><strong>Version 1.0.0</strong> - 4 Jul 25</p>
+<pre>
+Full redesign.
+</pre>
+				<p><strong>Version 0.9.0</strong> - 24 Jen 25</p>
+<pre>
+Initial publication.
+</pre>
+			</section>
+		</div>
+
+		<footer>
+            <div>
+                <p class="copyright">Copyright 2025 kjvama.com All rights reserved.</p>
             </div>
-        </header>
-        <div class="text">
-            <p>
-                This website encourages reading the Bible in its full context, helping readers move beyond chapter breaks to better understand the flow and meaning of Scripture.
-            </p>
-            <p>
-                It features the King James Bible in its Pure Cambridge Edition (PCE) - the historically received and trusted form of the Authorized Version.
-            </p>
-            <p class="toppad">
-                Please note: while the biblical text itself is in the public domain, the design and presentation of this site are copyrighted. Copying or modifying this website without permission may violate copyright law.
-            </p>
-        </div>
-        <hr />
-        <div class="text">
-            <p>
-                <a href="about-kjv.htm">About the King James Bible</a>
-            </p>
-        </div>
-        <div class="tab_group">
-            <nav class="tab">
-                <ul class="main">
-                    <li class="line">&nbsp;</li>
-                    <li class="line">&nbsp;</li>
-                    <li class="line">&nbsp;</li>
-                    <li class="line">&nbsp;</li>
-                    <li><button class="book" id="genesis">Genesis</button></li>
-                    <li><button class="book" id="exodus">Exodus</button></li>
-                    <li><button class="book" id="leviticus">Leviticus</button></li>
-                    <li><button class="book" id="numbers">Numbers</button></li>
-                    <li><button class="book" id="deuteronomy">Deuteronomy</button></li>
-                    <li><button class="book" id="joshua">Joshua</button></li>
-                    <li><button class="book" id="judges">Judges</button></li>
-                    <li><button class="book" id="ruth">Ruth</button></li>
-                    <li><button class="book" id="1samuel">1 Samuel</button></li>
-                    <li><button class="book" id="2samuel">2 Samuel</button></li>
-                    <li><button class="book" id="1kings">1 Kings</button></li>
-                    <li><button class="book" id="2kings">2 Kings</button></li>
-                    <li><button class="book" id="1chronicles">1 Chronicles</button></li>
-                    <li><button class="book" id="2chronicles">2 Chronicles</button></li>
-                    <li><button class="book" id="ezra">Ezra</button></li>
-                    <li><button class="book" id="nehemiah">Nehemiah</button></li>
-                    <li><button class="book" id="esther">Esther</button></li>
-                    <li><button class="book" id="job">Job</button></li>
-                    <li><button class="book" id="psalms">Psalms</button></li>
-                    <li><button class="book" id="proverbs">Proverbs</button></li>
-                    <li><button class="book" id="ecclesiastes">Ecclesiastes</button></li>
-                    <li><button class="book" id="song-of-solomon">Song of Solomon</button></li>
-                    <li><button class="book" id="isaiah">Isaiah</button></li>
-                    <li><button class="book" id="jeremiah">Jeremiah</button></li>
-                    <li><button class="book" id="lamentations">Lamentations</button></li>
-                    <li><button class="book" id="ezekiel">Ezekiel</button></li>
-                    <li><button class="book" id="daniel">Daniel</button></li>
-                    <li><button class="book" id="hosea">Hosea</button></li>
-                    <li><button class="book" id="joel">Joel</button></li>
-                    <li><button class="book" id="amos">Amos</button></li>
-                    <li><button class="book" id="obadiah">Obadiah</button></li>
-                    <li><button class="book" id="jonah">Jonah</button></li>
-                    <li><button class="book" id="micah">Micah</button></li>
-                    <li><button class="book" id="nahum">Nahum</button></li>
-                    <li><button class="book" id="habakkuk">Habakkuk</button></li>
-                    <li><button class="book" id="zephaniah">Zephaniah</button></li>
-                    <li><button class="book" id="haggai">Haggai</button></li>
-                    <li><button class="book" id="zechariah">Zechariah</button></li>
-                    <li><button class="book" id="malachi">Malachi</button></li>
-                    <li class="empty">&nbsp;</li>
-                    <li class="line">&nbsp;</li>
-                    <li class="line">&nbsp;</li>
-                    <li class="line">&nbsp;</li>
-                    <li class="line">&nbsp;</li>
-                    <li><button class="book" id="matthew">Matthew</button></li>
-                    <li><button class="book" id="mark">Mark</button></li>
-                    <li><button class="book" id="luke">Luke</button></li>
-                    <li><button class="book" id="john">John</button></li>
-                    <li><button class="book" id="acts">Acts</button></li>
-                    <li><button class="book" id="romans">Romans</button></li>
-                    <li><button class="book" id="1corinthians">1 Corinthians</button></li>
-                    <li><button class="book" id="2corinthians">2 Corinthians</button></li>
-                    <li><button class="book" id="galatians">Galatians</button></li>
-                    <li><button class="book" id="ephesians">Ephesians</button></li>
-                    <li><button class="book" id="philippians">Phillippians</button></li>
-                    <li><button class="book" id="colossians">Colossians</button></li>
-                    <li><button class="book" id="1thessalonians">1 Thessalonians</button></li>
-                    <li><button class="book" id="2thessalonians">2 Thessalonians</button></li>
-                    <li><button class="book" id="1timothy">1 Timothy</button></li>
-                    <li><button class="book" id="2timothy">2 Timothy</button></li>
-                    <li><button class="book" id="titus">Titus</button></li>
-                    <li><button class="book" id="philemon">Philemon</button></li>
-                    <li><button class="book" id="hebrews">Hebrews</button></li>
-                    <li><button class="book" id="james">James</button></li>
-                    <li><button class="book" id="1peter">1 Peter</button></li>
-                    <li><button class="book" id="2peter">2 Peter</button></li>
-                    <li><button class="book" id="1john">1 John</button></li>
-                    <li><button class="book" id="2john">2 John</button></li>
-                    <li><button class="book" id="3john">3 John</button></li>
-                    <li><button class="book" id="jude">Jude</button></li>
-                    <li><button class="book" id="revelation">Revelation</button></li>
-                    <li class="empty">&nbsp;</li>
-                    <li class="line">&nbsp;</li>
-                    <li class="line">&nbsp;</li>
-                    <li class="line">&nbsp;</li>
-                    <li class="line">&nbsp;</li>
-                </ul>
-            </nav>
-        </div>
-        <footer>
-            <!-- <div class="top">
-                <div class="clear">
-                    <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                    </ul>
-                    <div>
-                        <p><strong></strong></p>
-                        <select>
-                            <option selected="selected">FAMILY SITE</option>
-                        </select>
-                    </div>
-                </div>
-            </div> -->
-            <div class="btm">
-                <p><span class="hide">kjvama</span></p>
-                <!-- <ul>
-                    <li></li>
-                    <li>Tel</li>
-                    <li>Manager</li>
-                    <li>E-mail</li>
-                </ul> -->
-                <address>Copyright 2025 kjvama.com All rights reserved.</address>
-            </div>
+			<a id="atop" href="#">Top</a>
         </footer>
-        <script src="js/site.js" charset="utf-8"></script>
-    </body>
+
+		<!-- Vendor -->
+		<script src="vendor/jquery/jquery.js"></script>
+		<script src="vendor/bootstrap/bootstrap.js"></script>
+		<script src="js/docs.js"></script>
+		<script src="js/custom.js"></script>
+
+	</body>
 </html>
