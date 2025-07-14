@@ -28,6 +28,7 @@ section > p span.chapter, span.verse, span.noverse { font-size:24.0pt; word-brea
 section > p span.verse { display:inline; }
 section > p span.verse:first-child { margin-right:10px; padding:0 10px 0 10px; background-color: #FBFBFB; border:1px solid #DDDDDD; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none;  user-select:none; }
 section > p span.noverse { justify-content: center; align-items: center; display: flex; }
+section > p.active span:first-child { background-color:#1676B6; color:#fff; font-weight:bold; }
 
 section > p button { font-size:20.0pt; font-family: "Times New Roman", Times, serif; color:#000; background-color: transparent; vertical-align:bottom; }
 section > p button#plan { margin:4px 4px 0 1px; background: lemonchiffon; font-size:16.0pt; border:1px solid; }
@@ -44,9 +45,11 @@ section > p.chapter { margin:20px 0 14px 0; padding:20px 0 16px 0; text-align:ce
 section > p.chapter span { font-size:20.0pt; margin-bottom:10px; }
 section > p.verse { text-align:justify; }
 
-ul li.maintoppad { line-height:24px;}
-ul li.toppad { line-height:84px;}
+ul li.maintoppad { line-height:60px;}
+ul li.toppad { line-height:0px;}
 ul li.chapter { line-height:24px; }
+ul li.bookname { line-height:84px; text-align:center; padding:0 4px 0 0; font-size:medium; background-color:#0083CA; color:#fff; }
+ul li > hr { margin:0; }
 
 table tr th, td { font-family: "Times New Roman", Times, serif; font-size:16.0pt; }
 table tr th.hdcolor { background-color:#64A4CE; color:#FFF; font-size:20.0pt; }
