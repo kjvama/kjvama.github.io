@@ -6,6 +6,8 @@
 i.fs { font-size:medium; }
 .right { text-align:right; }
 
+.scrollable-menu { height: auto; max-height: 900px; overflow-x: hidden; }
+
 #atop { position: fixed; bottom: 3em; right: 3em; background-color: rgba(255, 255, 255, .9); color: #313943; border: none; border-radius: 5px; padding: 1em; text-transform: uppercase; cursor: pointer; font-weight: 700; box-shadow: 0 0 2em 0 rgba(0, 0, 0, .25); transition: all .3s ease-in-out; display: inline-block; opacity: 0; text-decoration: none; font-size: .75em; }
     #atop:hover { background-color: #fff; padding: 1em 3em; }
 #atop.visible { opacity: 1; }
@@ -28,7 +30,7 @@ section > p span.chapter, span.verse, span.noverse { font-size:24.0pt; word-brea
 section > p span.verse { display:inline; }
 section > p span.verse:first-child { margin-right:10px; padding:0 10px 0 10px; background-color: #FBFBFB; border:1px solid #DDDDDD; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none;  user-select:none; }
 section > p span.noverse { justify-content: center; align-items: center; display: flex; }
-section > p.active span:first-child { background-color:#1676B6; color:#fff; font-weight:bold; }
+section > p.active span:first-child { background-color:#E73F32; color:#fff; font-weight:normal; }/* #1676B6 */
 
 section > p button { font-size:20.0pt; font-family: "Times New Roman", Times, serif; color:#000; background-color: transparent; vertical-align:bottom; }
 section > p button#plan { margin:4px 4px 0 1px; background: lemonchiffon; font-size:16.0pt; border:1px solid; }
