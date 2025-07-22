@@ -24,6 +24,7 @@ a.arrow:active { color:red; }
 .main .booknamebox > h2 { font-size:45.0pt; font-weight: bold; text-align: center; }
 .main .booknamebox > h4 { font-size:35.0pt; text-align: center; }
 .main span.bookname { color:#6437FF; margin:0 10px 0 0; }
+
 section { cursor:text; }
 section::selection {background-color: #EDC2D6;}
 section > p span.chapter, span.verse, span.noverse { font-size:24.0pt; word-break: normal; margin-bottom: 1em; line-height: 1.5em; }
