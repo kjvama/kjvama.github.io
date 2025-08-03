@@ -5,6 +5,9 @@
 .hide { overflow: hidden; display: block; position: absolute; border: 0; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px); }
 i.fs { font-size:medium; }
 .right { text-align:right; }
+.basic { font-family: "Poppins", Arial, sans-serif; }
+.bsize { font-size: 0.5em; }
+.bsize9 { font-size: 0.9em !important; }
 
 .scrollable-menu { height: auto; max-height: 900px; overflow-x: hidden; }
 
@@ -31,6 +34,7 @@ section > p span.chapter, span.verse, span.noverse { font-size:24.0pt; word-brea
 section > p span.verse { display:inline; }
 section > p span.verse:first-child { margin-right:10px; padding:0 10px 0 10px; background-color: #FBFBFB; border:1px solid #DDDDDD; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none;  user-select:none; }
 section > p span.noverse { justify-content: center; align-items: center; display: flex; }
+section > p span.active { background-color:#F0847B; }
 section > p.active span:first-child { background-color:#E73F32; color:#fff; font-weight:normal; }/* #1676B6 */
 
 section > p button { font-size:20.0pt; font-family: "Times New Roman", Times, serif; color:#000; background-color: transparent; vertical-align:bottom; }
@@ -42,7 +46,7 @@ section > p button.copied { margin: 0 0 10px 7px; padding: 0 5px 3px 5px; backgr
 section > p, h6, h5, h4, h2 { font-family: "Times New Roman", Times, serif; }
 section > p, h6, h5, h2 { color:#000;}
 section > h2 { margin:24px 0 20px 0; }
-section > h4 { color: #0088cc; font-size: 18px; }
+section > h4 { color: #0088cc; font-size: 18px; margin:0 0 10px 0; }
 section > p.lead { font-size:20.0pt; }
 section > p.chapter { margin:20px 0 14px 0; padding:20px 0 16px 0; text-align:center; background-color:#E6DFFF; color:#000; }
 section > p.chapter span { font-size:20.0pt; margin-bottom:10px; }
@@ -50,9 +54,11 @@ section > p.verse { text-align:justify; }
 
 ul li.maintoppad { line-height:60px;}
 ul li.toppad { line-height:0px;}
+ul li.botpad { line-height:60px;}
 ul li.chapter { line-height:24px; }
 ul li.bookname { line-height:84px; text-align:center; padding:0 4px 0 0; font-size:medium; background-color:#0083CA; color:#fff; }
 ul li > hr { margin:0; }
+ul li.optgroup { background-color: #337ab7; color: #fff; margin:0 0 3px -8px; padding:3px 8px; }
 
 table tr th, td { font-family: "Times New Roman", Times, serif; font-size:16.0pt; }
 table tr th.hdcolor { background-color:#64A4CE; color:#FFF; font-size:20.0pt; }
@@ -61,3 +67,6 @@ table tr td.right { text-align: right;}
 
 footer div p { font-family: "Times New Roman", Times, serif; font-size:16.0pt; }
 footer div p.copyright { text-align: center; padding-bottom: 50px; }
+footer div p.basic, h5.basic, h2.basic { font-family: "Poppins", Arial, sans-serif; }
+footer div p.basic { font-size:0.9em; }
+.container div p.basic { font-family: "Poppins", Arial, sans-serif; }
