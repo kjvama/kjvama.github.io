@@ -1,3 +1,24 @@
+/*
+//by html
+window.addEventListener(
+"load",
+function () {
+    const currentPath = window.location.pathname;
+    const fileName = currentPath.split('/').pop();
+    const menulinks = document.querySelectorAll("ul.dropdown-menu li a.menulink");
+    menulinks.forEach(item => {
+        let href = item.getAttribute("href");
+
+        if (fileName.toLowerCase() === href.toLowerCase())
+        {
+            item.parentNode.classList.add('active');
+        }
+    });
+},
+false
+);
+*/
+
 const downplan = document.querySelector("#plan");
 
 if (downplan !== null) {
