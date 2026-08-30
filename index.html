@@ -29,7 +29,7 @@
             const month = String(weekStart.getMonth() + 1).padStart(2, "0");
             const day = String(weekStart.getDate()).padStart(2, "0");
             const weekKey = `${weekStartYear}-${month}-${day}`;
-            const archiveUrl = `./weekly/archive_${weekStartYear}.html`;
+            const archiveUrl = `/weekly/archive_${weekStartYear}.html`;
 
             try {
                 const archiveResponse = await fetch(archiveUrl, { cache: "no-store" });
@@ -50,7 +50,7 @@
                 const aDataUrl = dataUrl.split("/");
                 const yearMonthPath = aDataUrl[1] + "/" + aDataUrl[2];
 
-                const redirectUrl = `./weekly/${weekStartYear}/${month}/${day}/${yearMonthPath}`;
+                const redirectUrl = `/weekly/${weekStartYear}/${month}/${day}/${yearMonthPath}`;
                 
                 const pageResponse = await fetch(redirectUrl, {
                     method: "HEAD"
@@ -74,6 +74,23 @@
                 const status = error.status ?? 500;
                 const url = error.url ?? window.location.href;
                 const message = error.message ?? String(error);
+
+                try {
+                    await fetch("https://log.kjvama.com/api/log", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            environment: "production",
+                            status: status,
+                            url: url,
+                            message: message
+                        })
+                    });
+                } catch (logError) {
+                    console.error("Failed to send log:", logError);
+                }
 
                 location.replace(
                     `/code/url-unavailable.html?status=${encodeURIComponent(status)}&url=${encodeURIComponent(url)}&message=${encodeURIComponent(message)}`
