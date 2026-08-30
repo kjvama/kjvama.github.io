@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Page Unavailable | KJVAMA</title>
+    <style>
+        :root {
+            --border-color: #dee2e6;
+            --text-color: #212529;
+            --muted-color: #6c757d;
+            --panel-bg: #f8f9fa;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 12vh 24px 24px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-color);
+            background: #fff;
+        }
+
+        .error-page {
+            width: 100%;
+            max-width: 640px;
+            text-align: center;
+        }
+
+        .site-brand {
+            margin-bottom: 28px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: var(--muted-color);
+        }
+
+        .error-page h1 {
+            margin: 0 0 12px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .error-page p {
+            margin: 0;
+            color: var(--muted-color);
+            line-height: 1.6;
+        }
+
+        .details-toggle {
+            margin-top: 24px;
+            padding: 8px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: #fff;
+            color: var(--text-color);
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .details-toggle:hover { background: var(--panel-bg); }
+
+        .details-panel {
+            display: none;
+            margin-top: 12px;
+            padding: 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--panel-bg);
+            text-align: left;
+            overflow-wrap: anywhere;
+        }
+
+        .details-panel.is-visible { display: block; }
+
+        .details-panel code {
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.875rem;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <main class="error-page">
+        <div class="site-brand">KJVAMA</div>
+
+        <h1>The URL you accessed is currently unavailable.</h1>
+        <p>Please contact the administrator.</p>
+
+        <button
+            type="button"
+            class="details-toggle"
+            id="detailsToggle"
+            aria-expanded="false"
+            aria-controls="detailsPanel">
+            Details
+        </button>
+
+        <div
+            class="details-panel"
+            id="detailsPanel"
+            role="region"
+            aria-label="Error details">
+            <code id="errorDetails"></code>
+        </div>
+    </main>
+
+    <script>
+        const detailsToggle = document.getElementById("detailsToggle");
+        const detailsPanel = document.getElementById("detailsPanel");
+        const errorDetails = document.getElementById("errorDetails");
+
+        const params = new URLSearchParams(window.location.search);
+
+        const status = params.get("status");
+        const url = params.get("url");
+        const message = params.get("message");
+
+        if (status || url || message) {
+            errorDetails.textContent =
+                `Status: ${status ?? "Unknown"}\n` +
+                `URL: ${url ?? "Unknown"}\n` +
+                `Message: ${message ?? "Unknown"}`;
+        } else {
+            errorDetails.textContent =
+                "No error details were provided.";
+        }
+
+        detailsToggle.addEventListener("click", () => {
+            const isVisible = detailsPanel.classList.toggle("is-visible");
+
+            detailsToggle.setAttribute("aria-expanded", isVisible);
+            detailsToggle.textContent = isVisible
+                ? "Hide Details"
+                : "Details";
+        });
+    </script>
+</body>
+</html>

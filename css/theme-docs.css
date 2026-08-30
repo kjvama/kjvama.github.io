@@ -1,0 +1,555 @@
+body[data-template="docs"] {
+    /* Primary */
+    --kjvama-primary: #2f913c;
+    --kjvama-primary-hover: #23752e;
+    --kjvama-primary-soft: #eaf5ec;
+
+    /* Header */
+    --kjvama-header: #2f913c;
+    --kjvama-header-text: #ffffff;
+
+    /* Footer */
+    --kjvama-footer: #155a24;
+
+    /* Text */
+    --kjvama-text: #212121;
+    --kjvama-sidebar-text: #535353;
+    --kjvama-body-text: #2F2F2F;
+    --kjvama-link: #2f913c;
+    --kjvama-muted: #737373;
+    --kjvama-toc-text: #232323;
+    --kjvama-toc-active: #2f913c;
+    --kjvama-toc-hover: #23752e;
+    --kjvama-toc-title: #737373;
+
+    /* Surface / Border */
+    --kjvama-border: #e9e9e9;
+    --kjvama-surface: #ffffff;
+    --kjvama-surface-muted: #f7f7f7;
+
+    /* For Converting Markdown to HTML */
+    --kjvama-code-inline: #f1f3f1;
+}
+body[data-template="docs"] {
+    margin: 0;
+}
+
+/* Code within a code block */
+body[data-template="docs"] #markdown-content pre code {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #455a64;
+}
+
+/* Inline code within a sentence */
+body[data-template="docs"] #markdown-content :not(pre) > code {
+    display: inline;
+    padding: 0.1em 0.4em;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.95em;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #455a64;
+    background: #e8ecec;
+    border-radius: 3px;
+}
+
+.md-code-block {
+    position: relative;
+}
+
+.md-copy-button {
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #455a64;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.md-copy-button svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.md-copy-button:hover {
+    background: #ffffff;
+    border-color: #cfd8dc;
+}
+
+.md-copy-button:focus-visible {
+    outline: 2px solid #90a4ae;
+    outline-offset: 1px;
+}
+
+body[data-template="docs"] #markdown-content a:not(.headerlink) {
+    color: var(--kjvama-link);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+body[data-template="docs"] #markdown-content a:not(.headerlink):hover {
+    color: var(--kjvama-toc-hover);
+    text-decoration: none;
+}
+
+body[data-template="docs"] #markdown-content .md-admonition {
+    margin: 18px 0;
+    padding: 0;
+    border: 1px solid #3f7ff0;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+body[data-template="docs"] #markdown-content .md-admonition.md-admonition--tip {
+    border-color: #14b8a6;
+    background: #e6f7f5;
+}
+
+body[data-template="docs"] #markdown-content .md-admonition.md-admonition--tip .md-admonition__title {
+    background: #e6f7f5;
+}
+
+body[data-template="docs"] #markdown-content .md-admonition.md-admonition--tip .md-admonition__body {
+    background: #e6f7f5;
+}
+
+body[data-template="docs"] #markdown-content .md-admonition__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 10px 14px;
+    background: #eaf2ff;
+    color: #303030;
+    font-weight: 700;
+}
+
+body[data-template="docs"] #markdown-content .md-admonition__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #3f7ff0;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1;
+}
+
+body[data-template="docs"] #markdown-content .md-admonition__body {
+    padding: 14px;
+    background: #ffffff;
+}
+
+body[data-template="docs"] #markdown-content .md-admonition__body p {
+    margin: 0;
+}
+
+body[data-template="docs"] .doc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 28px;
+    background: var(--kjvama-header);
+    color: var(--kjvama-header-text);
+}
+
+body[data-template="docs"] .doc-header__brand {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+body[data-template="docs"] .doc-header__brand img {
+    display: block;
+    height: 58px;
+    width: auto;
+}
+
+body[data-template="docs"] .doc-header__actions {
+    display: flex;
+    gap: 20px;
+}
+
+body[data-template="docs"] .doc-header__actions a {
+    color: var(--kjvama-header-text);
+}
+
+body[data-template="docs"] .doc-shell {
+    grid-template-columns: 250px minmax(0, 1fr) 220px;
+}
+
+/* Documentation Sidebar Two-level Accordion */
+
+body[data-template="docs"] .doc-sidebar {
+    padding: 30px 18px;
+}
+
+body[data-template="docs"] .doc-sidebar__nav {
+    min-width: 0;
+    color: var(--kjvama-sidebar-text);
+}
+
+/* View Mode */
+body[data-template="docs"] .doc-sidebar__view {
+    margin: 0 0 12px;
+    padding: 0;
+    border: 0;
+}
+
+body[data-template="docs"] .doc-sidebar__view legend {
+    margin: 0 0 4px;
+    padding: 0;
+    color: var(--kjvama-muted);
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+body[data-template="docs"] .doc-sidebar__view-control {
+    display: flex;
+    width: 100%;
+    max-width: 220px;
+    border: 1px solid var(--kjvama-border);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--kjvama-surface);
+}
+
+body[data-template="docs"] .doc-sidebar__view-option {
+    position: relative;
+    flex: 1 1 50%;
+    margin: 0;
+    cursor: pointer;
+}
+
+body[data-template="docs"] .doc-sidebar__view-option + .doc-sidebar__view-option {
+    border-left: 1px solid var(--kjvama-border);
+}
+
+body[data-template="docs"] .doc-sidebar__view-option input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body[data-template="docs"] .doc-sidebar__view-option span {
+    display: block;
+    padding: 7px 8px;
+    color: var(--kjvama-sidebar-text);
+    font-size: 0.8rem;
+    line-height: 1.3;
+    text-align: center;
+    user-select: none;
+}
+
+body[data-template="docs"] .doc-sidebar__view-option:hover span {
+    background: rgba(47, 145, 60, 0.045);
+}
+
+body[data-template="docs"] .doc-sidebar__view-option input:checked + span {
+    background: rgba(47, 145, 60, 0.11);
+    color: var(--kjvama-primary);
+    font-weight: 600;
+}
+
+body[data-template="docs"] .doc-sidebar__view-option input:focus-visible + span {
+    outline: 2px solid var(--kjvama-primary);
+    outline-offset: -2px;
+}
+
+/* Accordion */
+body[data-template="docs"] .doc-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+body[data-template="docs"] .doc-accordion__item {
+    margin: 0;
+}
+
+body[data-template="docs"] .doc-accordion__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 36px;
+    padding: 7px 9px;
+    border: 0;
+    border-radius: 4px;
+    background: rgba(47, 145, 60, 0.055);
+    color: var(--kjvama-text);
+    font: inherit;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 120ms ease;
+}
+
+body[data-template="docs"] .doc-accordion__button:hover {
+    background: rgba(47, 145, 60, 0.095);
+}
+
+body[data-template="docs"] .doc-accordion__button:focus-visible {
+    outline: 2px solid var(--kjvama-primary);
+    outline-offset: 1px;
+}
+
+body[data-template="docs"] .doc-accordion__label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+body[data-template="docs"] .doc-accordion__indicator {
+    flex: 0 0 18px;
+    width: 18px;
+    margin-left: 8px;
+    color: var(--kjvama-primary);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+}
+
+body[data-template="docs"] .doc-accordion__panel {
+    padding: 6px 0 7px 8px;
+}
+
+body[data-template="docs"] .doc-accordion__panel[hidden] {
+    display: none;
+}
+
+body[data-template="docs"] .doc-accordion__link {
+    display: block;
+    min-width: 0;
+    padding: 5px 5px;
+    color: var(--kjvama-sidebar-text);
+    text-decoration: none;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+body[data-template="docs"] .doc-accordion__link:hover {
+    color: var(--kjvama-primary-hover);
+}
+
+body[data-template="docs"] .doc-accordion__link.is-active {
+    color: var(--kjvama-primary);
+    font-weight: 600;
+}
+
+/* Secondary Navigation */
+body[data-template="docs"] .doc-sidebar__secondary {
+    margin-top: 13px;
+    padding-top: 10px;
+    border-top: 1px solid var(--kjvama-border);
+}
+
+body[data-template="docs"] .doc-nav__secondary-link {
+    display: block;
+    padding: 3px 0;
+    color: var(--kjvama-sidebar-text);
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+body[data-template="docs"] .doc-nav__secondary-link:hover {
+    color: var(--kjvama-primary-hover);
+}
+
+
+/* Second-level vertical rhythm */
+body[data-template="docs"] .doc-accordion__panel .doc-accordion__link + .doc-accordion__link {
+    margin-top: 2px;
+}
+
+/* Keep second-level navigation text-only. */
+body[data-template="docs"] .doc-accordion__panel .doc-accordion__link:hover,
+body[data-template="docs"] .doc-accordion__panel .doc-accordion__link.is-active {
+    background: transparent;
+}
+
+/* /Documentation Sidebar Two-level Accordion */
+
+body[data-template="docs"] .doc-nav__item {
+    color: var(--kjvama-sidebar-text);
+}
+
+body[data-template="docs"] .doc-nav__item.is-active {
+    background: var(--kjvama-primary-soft);
+    color: var(--kjvama-primary);
+    font-weight: 600;
+    position: relative;
+}
+
+body[data-template="docs"] .doc-nav__item.is-active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 3px;
+    border-radius: 2px;
+    background: var(--kjvama-primary);
+}
+
+body[data-template="docs"] .doc-main {
+    min-width: 0;
+    padding: 40px 48px 32px;
+}
+
+body[data-template="docs"] .doc-toc {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    padding: 30px 18px;
+    border-left: 1px solid var(--kjvama-border);
+}
+
+body[data-template="docs"] .doc-toc a {
+    color: var(--kjvama-toc-text);
+}
+
+body[data-template="docs"] .doc-toc a:hover {
+    color: var(--kjvama-toc-hover);
+}
+
+body[data-template="docs"] .doc-toc a.is-active {
+    color: var(--kjvama-toc-active);
+    font-weight: 600;
+}
+
+body[data-template="docs"] .doc-footer {
+    min-height: 64px;
+    padding: 0 2rem;
+    align-items: center;
+    background: #161616;
+    color: #FFFFFF;
+}
+
+body[data-template="docs"] .doc-footer a {
+    color: #FFFFFF;
+}
+
+body[data-template="docs"] .doc-toc__title {
+    color: var(--kjvama-toc-title);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+body[data-template="docs"] .kjvama-modal__dialog {
+    background: var(--kjvama-surface);
+}
+
+body[data-template="docs"] .kjvama-table-scroll--modal table {
+    border-collapse: collapse;
+}
+
+body[data-template="docs"] .kjvama-table-scroll--modal th {
+    background: #f5f5f5;
+    border-bottom: 1px solid var(--kjvama-border);
+}
+
+body[data-template="docs"] .kjvama-table-scroll--modal td {
+    border-bottom: 1px solid var(--kjvama-border);
+}
+
+body[data-template="docs"] .doc-pager {
+    background: var(--kjvama-footer);
+}
+
+body[data-template="docs"] .doc-pager__prev,
+body[data-template="docs"] .doc-pager__next {
+    color: #FFFFFF;
+}
+
+body[data-template="docs"] .doc-pager__prev:hover,
+body[data-template="docs"] .doc-pager__next:hover {
+    color: #BCBCBC;
+}
+
+body[data-template="docs"] .doc-pager__label {
+    color: #A0A0A0;
+}
+
+body[data-template="docs"] .doc-pager__text {
+    color: inherit;
+}
+
+body[data-template="docs"] .doc-pager__button svg {
+    fill: currentColor;
+}
+
+body[data-template="docs"] .doc-footer {
+    width: 100%;
+    min-height: 64px;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 32px;
+    background: #161616;
+    color: #FFFFFF;
+}
+
+body[data-template="docs"] .doc-footer__brand {
+    justify-self: start;
+    white-space: nowrap;
+}
+
+body[data-template="docs"] .doc-footer__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    white-space: nowrap;
+}
+
+body[data-template="docs"] .doc-footer__copyright {
+    justify-self: end;
+    white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+    body[data-template="docs"] .doc-footer {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    body[data-template="docs"] .doc-footer__brand,
+    body[data-template="docs"] .doc-footer__copyright {
+        justify-self: center;
+    }
+}

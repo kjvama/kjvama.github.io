@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <style>
+        html {
+            visibility: hidden;
+        }
+    </style>
+
+    <title>Home | KJVAMA Docs</title>
+</head>
+<body>
+
+    <p id="redirect-message">Redirecting to the weekly main ...</p>
+
+    <script>
+        (async function () {
+            const today = new Date();
+            const currentYear = today.getFullYear();
+
+            // The weekly archive uses Sunday as the first day of the week.
+            const weekStart = new Date(today);
+            weekStart.setHours(0, 0, 0, 0);
+            weekStart.setDate(today.getDate() - today.getDay());
+
+            const weekStartYear = weekStart.getFullYear();
+            const month = String(weekStart.getMonth() + 1).padStart(2, "0");
+            const day = String(weekStart.getDate()).padStart(2, "0");
+            const weekKey = `${weekStartYear}-${month}-${day}`;
+            const archiveUrl = `./weekly/archive_${weekStartYear}.html`;
+
+            try {
+                const archiveResponse = await fetch(archiveUrl, { cache: "no-store" });
+
+                if (!archiveResponse.ok) {
+                    throw new Error(`Archive request failed: ${archiveResponse.status}`);
+                }
+
+                const archiveHtml = await archiveResponse.text();
+                const archiveDocument = new DOMParser().parseFromString(archiveHtml, "text/html");
+                const weekItem = archiveDocument.querySelector(`li[data-week="${weekKey}"]`);
+                const dataUrl = weekItem?.dataset.url;
+
+                if (!dataUrl) {
+                    throw new Error(`Weekly archive entry not found: ${weekKey}`);
+                }
+
+                const aDataUrl = dataUrl.split("/");
+                const dataUrlWithoutDay = aDataUrl[1] + "/" + aDataUrl[2];
+
+                const redirectUrl = `./weekly/${weekStartYear}/${month}/${day}/${dataUrl}`;
+                
+                const pageResponse = await fetch(redirectUrl, {
+                    method: "HEAD"
+                });
+
+                if (!pageResponse.ok) {
+                    const error = new Error("Page unavailable");
+
+                    error.status = pageResponse.status;
+                    error.url = new URL(
+                        redirectUrl,
+                        window.location.href
+                    ).pathname;
+
+                    throw error;
+                }
+
+                window.location.replace(redirectUrl);
+
+            } catch (error) {
+                const status = error.status ?? 500;
+                const url = error.url ?? window.location.href;
+                const message = error.message ?? String(error);
+
+                location.replace(
+                    `/code/url-unavailable.html?status=${encodeURIComponent(status)}&url=${encodeURIComponent(url)}&message=${encodeURIComponent(message)}`
+                );
+            }
+        })();
+    </script>
+
+</body>
+</html>
