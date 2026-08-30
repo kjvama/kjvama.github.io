@@ -75,6 +75,23 @@
                 const url = error.url ?? window.location.href;
                 const message = error.message ?? String(error);
 
+                try {
+                    await fetch("https://log.kjvama.com/api/log", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            environment: "production",
+                            status: status,
+                            url: url,
+                            message: message
+                        })
+                    });
+                } catch (logError) {
+                    console.error("Failed to send log:", logError);
+                }
+
                 location.replace(
                     `/code/url-unavailable.html?status=${encodeURIComponent(status)}&url=${encodeURIComponent(url)}&message=${encodeURIComponent(message)}`
                 );
