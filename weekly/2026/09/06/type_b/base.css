@@ -1,0 +1,37 @@
+:root {
+    --accent: #087d91;
+    --ink: #182033;
+    --muted: #667080;
+    --line: #d4dbe5;
+    --paper: #fff;
+    --soft: #f6f8fb;
+    --navy: #071d42
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.5
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0
+}
